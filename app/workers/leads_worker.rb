@@ -1,5 +1,7 @@
 class LeadsWorker
   require 'csv'
+  # include Sidekiq::Worker and define a perform instance method
+  # that takes in whatever data is required to complete the job
   include Sidekiq::Worker
 
   def perform(leads_file)
